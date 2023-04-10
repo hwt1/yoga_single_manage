@@ -36,4 +36,10 @@ public class IndexController {
         session.setAttribute("myUseId","123456");
         return "sessiontest/show";
     }
+
+    @RequestMapping("/toRegister")
+    public String toRegister(){
+        return "test/register";
+    }
+
 }

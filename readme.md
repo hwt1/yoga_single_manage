@@ -3,6 +3,8 @@
 1. [关于 JSTL JSP标签库的使用](<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>)
 
 2. 自定义servlet的写法
+
+（jsp页面编译之后就是servlet类，所以servlet与jsp是等价的）
   ````
 (1) 自定义servlet类需要继承 HttpServlet类，根据需要重写 doGet、doPost方法 
 `public class MyServlet2 extends HttpServlet`
