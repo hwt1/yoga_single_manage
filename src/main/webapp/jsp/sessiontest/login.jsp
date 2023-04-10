@@ -16,6 +16,7 @@
 密码：<input type="password" name="password"><br>
     <input type="submit" value="提交">
     <a href="/myServlet2">myServlet2</a>
+    <a href="/downloadPicServlet?fileName=a.jpg" methods="post">头像下载</a>
 </form>
 
 </body>
