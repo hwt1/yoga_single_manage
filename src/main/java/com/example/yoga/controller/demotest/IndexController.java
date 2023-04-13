@@ -42,4 +42,8 @@ public class IndexController {
         return "test/register";
     }
 
+    @RequestMapping("/toParamListener")
+    public String toParamListener(){
+        return "test/paramListener";
+    }
 }
