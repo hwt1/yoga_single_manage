@@ -54,7 +54,7 @@
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
-            <version>7.0.59</version>
+            <!--<version>7.0.59</version> 添加这个版本号会导致jsp页面无法解析EL表达式-->
             <scope>provided</scope>
         </dependency>
 

@@ -46,4 +46,24 @@ public class IndexController {
     public String toParamListener(){
         return "test/paramListener";
     }
+
+    @RequestMapping("/toTagTest")
+    public String toTagTest(HttpServletRequest request,HttpServletResponse response){
+        request.setAttribute("name","hello");
+        /*
+            getAttribute()一向是和setAttribute()一起使用的，只有先用setAttribute()设置之后，才能够通过getAttribute()来获得值，它们传递的是Object类型的数据。而且必须在同一个request对象中使用才有效。,而getParameter()是接收表单的get或者  post提交过来的参数，可用于jsp页面之间的跳转取值，但是不能用于这种情况：
+            jsp表单（uname）——》controller（getParameter 能取到uname值）——》jsp （getParameter 无法取到uname值）
+         */
+        return "test/tagTest";
+    }
+
+    @RequestMapping("/toTagShow")
+    public String tagShow(HttpServletRequest request,HttpServletResponse response){
+        //request.getRequestDispatcher("test/tagShow").forward(request,response);
+        request.setAttribute("uname",request.getParameter("uname"));
+        String[] hobbies = {"篮球","羽毛球","piano"};
+        request.setAttribute("hobbies",hobbies);
+        return "test/tagShow";
+    }
+
 }
